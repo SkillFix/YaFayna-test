@@ -1,0 +1,53 @@
+.accordion {
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.active,
+.accordion:hover {
+  background-color: #dde8f3;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: rgba(0, 0, 0, 0.647);
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  margin-right: 0px;
+  @media (min-width: 600px) {
+    margin-right: 10px;
+    font-size: 30px;
+  }
+}
+
+.active:after {
+  content: '\2212';
+}
+
+.panel {
+  padding: 10px 20px;
+
+  @media (min-width: 1000px) {
+    padding: 15px 50px;
+  }
+  background-color: #dde8f3;
+  display: none;
+  overflow: hidden;
+  &__mobile {
+    @media (min-width: 1000px) {
+      display: none;
+    }
+  }
+  &__desktop {
+    display: none;
+    @media (min-width: 1000px) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.services {
+  position: relative;
+  @include font(14px, normal, 1.22, normal);
+
+  @media (min-width: 1005px) {
+    @include font(18px, normal, 1.22, normal);
+  }
+  &__wrapper {
+    display: none;
+    @media (min-width: 1000px) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+  }
+  &__mobile-images {
+    display: flex;
+    max-height: 100%;
+    @media (min-width: 1000px) {
+      display: none;
+    }
+  }
+  &__images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+    gap: 50px;
+    &1 {
+      max-height: 400px;
+    }
+    &2 {
+      max-height: 500px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-family: $font-Monts__Alt;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-top: 400px;
+    @media (min-width: 1000px) {
+      @include font(60px, 300, 1.22, normal);
+    }
+    @media (min-width: 1200px) {
+      @include font(80px, 300, 1.22, normal);
+    }
+    &::before {
+      top: 60%;
+      @media (min-width: 500px) {
+        width: 100px;
+        height: 100px;
+      }
+      @media (min-width: 600px) {
+        width: 150px;
+        height: 150px;
+      }
+      @media (min-width: 800px) {
+        width: 350px;
+        height: 350px;
+      }
+    }
+  }
+  &__mobile-title {
+    position: relative;
+    font-family: $font-Monts__Alt;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    @include font(40px, 300, 1.22, normal);
+    @media (min-width: 800px) {
+      @include font(50px, 300, 1.22, normal);
+    }
+    @media (min-width: 1000px) {
+      display: none;
+    }
+    &::before {
+      left: 0%;
+      top: -20%;
+      height: 150px;
+      width: 150px;
+      @media (min-width: 480px) {
+        height: 220px;
+        width: 220px;
+      }
+    }
+  }
+  &__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+    @media (min-width: 1000px) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+    &::before {
+      top: 63%;
+      left: 0%;
+      height: 150px;
+      width: 150px;
+      @media (min-width: 480px) {
+        left: -15%;
+        height: 220px;
+        width: 220px;
+      }
+
+      @media (min-width: 760px) {
+        left: -15%;
+        height: 270px;
+        width: 270px;
+      }
+      @media (min-width: 800px) {
+        left: -15%;
+        height: 320px;
+        width: 320px;
+      }
+      @media (min-width: 1000px) {
+        display: none;
+      }
+      @media (min-width: 1185px) {
+        display: block;
+        right: 0;
+        left: auto;
+        top: auto;
+        height: 300px;
+        width: 300px;
+      }
+    }
+  }
+  &__list &__item:nth-child(2),
+  &__list &__item:nth-child(7),
+  &__list &__item:nth-child(11) {
+    margin-left: 90px;
+    @media (min-width: 1000px) {
+      margin: 0;
+    }
+  }
+  &__list &__item:nth-child(3),
+  &__list &__item:nth-child(8),
+  &__list &__item:nth-child(12) {
+    margin-left: 30px;
+    @media (min-width: 1000px) {
+      margin: 0;
+    }
+  }
+  &__list &__item:nth-child(4) {
+    margin-left: 150px;
+    @media (min-width: 1000px) {
+      margin: 0;
+    }
+  }
+  &__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    @include font(16px, 400, 1.22, normal);
+    @media (min-width: 420px) {
+      @include font(18px, 400, 1.22, normal);
+    }
+    @media (min-width: 1100px) {
+      @include font(18px, 400, 1.22, normal);
+    }
+  }
+  &__number {
+    font-family: $font-Monts__Alt;
+    @include font(30px, 300, 1.22, normal);
+    margin-right: 10px;
+    @media (min-width: 700px) {
+      @include font(38px, 300, 1.22, normal);
+      margin-right: 20px;
+    }
+    @media (min-width: 1050px) {
+      @include font(40px, 300, 1.22, normal);
+      margin-right: 5px;
+    }
+    &--white {
+      color: #fff;
+      @media (min-width: 1000px) {
+        color: #000;
+      }
+    }
+  }
+}

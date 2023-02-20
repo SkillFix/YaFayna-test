@@ -1,0 +1,30 @@
+.shadow {
+  &::before {
+    content: '';
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+
+    background: hsla(211, 17%, 62%, 0.651);
+
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    -webkit-filter: blur(62px);
+    filter: blur(62px);
+    top: calc(50% - 110px);
+
+    // горизонстально телефоны
+    @media screen and (max-width: 1200px) and (max-height: 500px) {
+      width: 200px;
+      height: 200px;
+      -webkit-filter: blur(62px);
+      filter: blur(62px);
+      top: calc(50% - -100px);
+    }
+  }
+}

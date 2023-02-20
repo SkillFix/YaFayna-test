@@ -1,0 +1,177 @@
+.hero {
+  width: 100%;
+  height: 100%;
+  padding-top: 300px;
+  &__container {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 15%;
+  }
+  &__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 250px;
+      @media screen and (min-width: 480px) {
+        width: 230px;
+        height: 230px;
+        -webkit-filter: blur(69px);
+        filter: blur(69px);
+        top: 250px;
+      }
+      @media screen and (min-width: 650px) {
+        top: 250px;
+        width: 300px;
+        height: 300px;
+        filter: blur(69px);
+      }
+      @media screen and (min-width: 800px) {
+        -webkit-filter: blur(62px);
+        filter: blur(62px);
+      }
+      @media screen and (min-width: 1000px) {
+        width: 330px;
+        height: 330px;
+        -webkit-filter: blur(69px);
+        filter: blur(69px);
+      }
+      @media screen and (min-width: 1200px) {
+        width: 350px;
+        height: 350px;
+        -webkit-filter: blur(69px);
+        filter: blur(69px);
+      }
+    }
+  }
+  &__title,
+  &__subtitle {
+    font-family: $font-Monts__Alt;
+    background: black url(./images/Intersect.svg);
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    @include font(25px, 300, 1.22, 2px);
+    background-size: 178px;
+    @media screen and (min-width: 360px) {
+      @include font(28px, 300, 1.22, 2px);
+    }
+    @media screen and (min-width: 420px) {
+      background-size: 151px;
+    }
+    @media screen and (min-width: 480px) {
+      @include font(30px, 300, 1.22, 2px);
+      background-size: 200px;
+    }
+    @media screen and (min-width: 650px) {
+      @include font(40px, 300, 1.22, 2px);
+      background-size: 270px;
+    }
+    @media screen and (min-width: 800px) {
+      @include font(60px, 300, 1.22, 3px);
+      background-size: 350px;
+    }
+    @media screen and (min-width: 1000px) {
+      @include font(60px, 300, 1.22, 3px);
+      background-size: 400px;
+    }
+    @media screen and (min-width: 1200px) {
+      @include font(80px, 300, 1.22, 2px);
+      background-size: 350px;
+    }
+    @media screen and (min-width: 1450px) {
+      @include font(100px, 300, 1.22, 3px);
+      background-size: 400px;
+    }
+    @media screen and (min-width: 1600px) {
+      @include font(100px, 300, 1.22, 3px);
+    }
+    // горизонстально телефоны
+    @media screen and (max-width: 1200px) and (max-height: 500px) {
+      @include font(36px, 300, 1.22, 3px);
+      background-size: 160px;
+    }
+  }
+  &__title {
+    text-align: left;
+    background-position: 50% 20%;
+  }
+  &__subtitle {
+    text-align: right;
+    background-position: 55% 20%;
+    margin-bottom: 100px;
+  }
+  &__sign-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    font-family: $font-Monts__Alt;
+    @include font(12px, normal, 1.22, normal);
+    @media screen and (min-width: 480px) {
+      @include font(15px, normal, 1.22, normal);
+    }
+    @media screen and (min-width: 1200px) {
+      @include font(18px, normal, 1.22, normal);
+    }
+  }
+  &__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 42px;
+    position: relative;
+    width: 138px;
+    height: 38px;
+
+    background-color: transparent;
+    font-family: $font-Monts__Alt;
+    border: none;
+    @include font(14px, normal, 1.22, normal);
+    @media screen and (min-width: 480px) {
+      height: 50px;
+      width: 171px;
+    }
+    @media (min-width: 1200px) {
+      transform: scale(1);
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .frame-button-left {
+    position: absolute;
+    left: 0;
+  }
+  .frame-button-right {
+    position: absolute;
+    right: 0;
+  }
+}

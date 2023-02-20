@@ -1,0 +1,40 @@
+.stock {
+  @include font(18px, normal, 1.22, normal);
+  position: relative;
+  & img {
+    max-height: 300px;
+  }
+
+  &__title {
+    @include font(100px, 300, 1.22, normal);
+    font-family: $font-Monts__Alt;
+    color: #fff;
+    &::before {
+      left: 0;
+      top: 50px;
+      bottom: 20px;
+      height: 400px;
+      width: 400px;
+    }
+  }
+  &__text {
+    &::before {
+      bottom: auto;
+      bottom: 20px;
+      height: 300px;
+      width: 300px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    gap: 50px;
+    & div:last-child {
+      padding-top: 122px;
+    }
+  }
+  &__number {
+    font-size: 80px;
+    font-family: $font-Monts__Alt;
+    margin-right: 30px;
+  }
+}

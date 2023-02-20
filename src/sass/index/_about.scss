@@ -1,0 +1,72 @@
+.about {
+  @include font(14px, normal, 1.22, normal);
+  @media screen and (min-width: 1280px) {
+    @include font(18px, normal, 1.22, normal);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (min-width: 800px) {
+      gap: 20px;
+    }
+  }
+  &__title {
+    font-family: $font-Monts__Alt;
+    @include font(40px, 300, 1.22, normal);
+    @media (min-width: 600px) {
+      @include font(40px, 300, 1.22, normal);
+    }
+    @media (min-width: 800px) {
+      @include font(50px, 300, 1.22, normal);
+    }
+    @media (min-width: 1000px) {
+      @include font(60px, 300, 1.22, normal);
+    }
+    @media (min-width: 1200px) {
+      @include font(80px, 300, 1.22, normal);
+    }
+  }
+  &__text {
+    margin-top: 20px;
+    width: 100%;
+
+    @include font(16px, 300, 1.22, normal);
+    @media screen and (min-width: 800px) {
+      margin-top: 50px;
+    }
+    @media screen and (min-width: 1000px) {
+      @include font(20px, 300, 1.22, normal);
+    }
+    @media screen and (min-width: 1280px) {
+      @include font(22px, 300, 1.22, normal);
+    }
+  }
+  &__image {
+    display: none;
+    @media screen and (min-width: 800px) {
+      display: block;
+      min-width: 350px;
+      max-width: 350px;
+    }
+    @media screen and (min-width: 1280px) {
+      min-width: 400px;
+      max-width: 400px;
+    }
+  }
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &__image-mobile {
+    margin-top: 20px;
+    width: 100%;
+    @media screen and (min-width: 480px) {
+      width: 350px;
+    }
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+  }
+}

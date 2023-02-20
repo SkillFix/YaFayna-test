@@ -1,0 +1,180 @@
+.backdrop-modal {
+  position: fixed;
+  overflow-y: scroll;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity $cubic-250ms;
+  backdrop-filter: blur(50px);
+  background: hsla(0, 1%, 17%, 0.185);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: visible;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  max-width: 635px;
+  transition: opacity $cubic-250ms;
+
+  border-radius: 15px;
+  border: none;
+  max-height: 100vh;
+  overflow-y: hidden;
+  background-color: #fff;
+
+  @media screen and (min-width: 1200px) {
+    height: 500px;
+  }
+  &__container {
+    padding: 70px 40px;
+    height: 100%;
+    min-width: 360px;
+    @media screen and (min-width: 800px) {
+      padding: 67px 60px;
+    }
+    @media screen and (min-width: 1000px) {
+      padding: 65px 60px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 100px 70px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    @media screen and (min-width: 1200px) {
+      margin-top: 43px;
+    }
+  }
+  &__title {
+    @include font(16px, normal, 1.22, normal);
+
+    font-family: $font-Monts__Alt;
+    @media screen and (min-width: 800px) {
+      @include font(18px, normal, 1.22, normal);
+    }
+    @media screen and (min-width: 1000px) {
+      @include font(20px, normal, 1.22, normal);
+    }
+    @media screen and (min-width: 1200px) {
+      @include font(25px, normal, 1.22, normal);
+    }
+  }
+
+  input {
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+    padding: 15px;
+    height: 32px;
+    @include font(18px, normal, 1.22, normal);
+    max-width: 290px;
+    outline: none;
+    &:nth-child(1) {
+      margin-bottom: 30px;
+    }
+    &._error {
+      border-bottom: 1px solid red;
+    }
+  }
+  &__form input:placeholder-shown {
+    @include font(16px, normal, 1.22, normal);
+
+    @media screen and (min-width: 1200px) {
+      @include font(18px, normal, 1.22, normal);
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    font-family: $font-Monts__Alt;
+    background-color: transparent;
+    border: none;
+    min-width: 120px;
+    max-width: 120px;
+    height: 50px;
+    @include font(10px, normal, 1.22, normal);
+    @media screen and (min-width: 800px) {
+      width: 180px;
+      @include font(12px, normal, 1.22, normal);
+    }
+    @media (min-width: 1200px) {
+      transform: scale(1);
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__send {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 40px;
+    @media screen and (min-width: 1200px) {
+      margin-top: 55px;
+    }
+  }
+  &__agree {
+    margin-left: 14px;
+    color: #8c9dae;
+    @include font(9px, normal, 1.22, normal);
+    & a {
+      color: #000;
+    }
+    @media screen and (min-width: 1000px) {
+      @include font(10px, normal, 1.22, normal);
+    }
+    @media screen and (min-width: 1200px) {
+      @include font(12px, normal, 1.22, normal);
+    }
+  }
+  .frame-button-left {
+    position: absolute;
+    left: 0;
+  }
+  .frame-button-right {
+    position: absolute;
+    right: 0;
+  }
+}
+
+/* ICON CLOSE */
+.modal_button-close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 10px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border: none;
+  @media (min-width: 1200px) {
+    transform: scale(1);
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}

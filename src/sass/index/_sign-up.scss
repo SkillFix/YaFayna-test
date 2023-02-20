@@ -1,0 +1,166 @@
+.sign-up {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 1000px) {
+      gap: 50px;
+    }
+  }
+  &__item:nth-child(2) {
+    width: 100%;
+  }
+  &__image1 {
+    display: none;
+    @media (min-width: 1000px) {
+      display: block;
+      min-width: 240px;
+      max-width: 240px;
+    }
+    @media (min-width: 1200px) {
+      min-width: 300px;
+      max-width: 300px;
+    }
+    @media (min-width: 1400px) {
+      min-width: 350px;
+      max-width: 350px;
+    }
+    @media (min-width: 1600px) {
+      min-width: 400px;
+      max-width: 400px;
+    }
+  }
+  &__image2 {
+    display: none;
+    @media (min-width: 800px) {
+      display: block;
+      min-width: 240px;
+      max-width: 240px;
+      margin-left: 30px;
+    }
+    @media (min-width: 1000px) {
+      margin: 0;
+    }
+    @media (min-width: 1200px) {
+      min-width: 300px;
+      max-width: 300px;
+    }
+    @media (min-width: 1400px) {
+      min-width: 350px;
+      max-width: 350px;
+    }
+    @media (min-width: 1600px) {
+      min-width: 400px;
+      max-width: 400px;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-family: $font-Monts__Alt;
+    @include font(20px, 300, 1.22, normal);
+    @media (min-width: 380px) {
+      @include font(22px, 300, 1.22, normal);
+    }
+    @media (min-width: 410px) {
+      @include font(24px, 300, 1.22, normal);
+    }
+    @media (min-width: 450px) {
+      @include font(26px, 300, 1.22, normal);
+      margin-bottom: 50px;
+    }
+    @media (min-width: 600px) {
+      @include font(30px, 300, 1.22, normal);
+    }
+    @media (min-width: 800px) {
+      @include font(26px, 300, 1.22, normal);
+      width: 450px;
+    }
+    @media (min-width: 1000px) {
+      @include font(20px, 300, 1.22, normal);
+      width: 100%;
+    }
+    @media (min-width: 1100px) {
+      @include font(25px, 300, 1.22, normal);
+    }
+    @media (min-width: 1270px) {
+      @include font(30px, 300, 1.22, normal);
+    }
+    @media (min-width: 1400px) {
+      margin-bottom: 70px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+  &__form input {
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+    outline: none;
+    padding: 15px;
+    @include font(18px, normal, 1.22, normal);
+  }
+  &__form input:placeholder-shown {
+    @include font(18px, normal, 1.22, normal);
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 171px;
+
+    background-color: transparent;
+    border: none;
+    font-family: $font-Monts__Alt;
+    @include font(12px, normal, 1.22, normal);
+    @media (min-width: 468px) {
+      @include font(14px, normal, 1.22, normal);
+    }
+    @media (min-width: 1200px) {
+      transform: scale(1);
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__send {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  &__agree {
+    color: #8c9dae;
+    margin-left: 20px;
+    @include font(12px, normal, 1.22, normal);
+    & a {
+      color: #000;
+    }
+    @media (min-width: 468px) {
+      @include font(14px, normal, 1.22, normal);
+    }
+    @media (min-width: 1000px) {
+      @include font(10px, normal, 1.22, normal);
+    }
+    @media (min-width: 1400px) {
+      @include font(12px, normal, 1.22, normal);
+    }
+  }
+  .frame-button-left {
+    position: absolute;
+    left: 0;
+  }
+  .frame-button-right {
+    position: absolute;
+    right: 0;
+  }
+}

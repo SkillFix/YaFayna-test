@@ -1,0 +1,89 @@
+.before-after {
+  & .container {
+    padding: 0;
+  }
+  &__title {
+    padding: 0 20px;
+    @media screen and (min-width: 768px) {
+      padding: 0 50px;
+    }
+  }
+  min-width: 0;
+  gap: 30px;
+  &__title {
+    font-family: $font-Monts__Alt;
+    @include font(30px, 300, 1.22, normal);
+    @media (min-width: 600px) {
+      @include font(40px, 300, 1.22, normal);
+    }
+    @media (min-width: 800px) {
+      @include font(50px, 300, 1.22, normal);
+    }
+    @media (min-width: 1000px) {
+      @include font(60px, 300, 1.22, normal);
+    }
+    @media (min-width: 1200px) {
+      @include font(80px, 300, 1.22, normal);
+    }
+  }
+}
+.swiper {
+  max-width: 1050px;
+  & .swiper-pagination-bullet {
+    background-color: black;
+    width: 7px;
+    height: 7px;
+    @media (min-width: 600px) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &-no-swiping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-slide {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px 30px 0px;
+    @media (min-width: 600px) {
+      padding: 50px 50px 50px 50px;
+    }
+    @media (min-width: 800px) {
+      padding: 50px 70px 50px 70px;
+    }
+  }
+  &-button-prev::after,
+  &-button-next::after {
+    color: #000;
+    font-size: 30px !important;
+    @media (min-width: 420px) {
+      font-size: 40px !important;
+    }
+    @media (min-width: 800px) {
+      font-size: 50px !important;
+    }
+    @media (min-width: 1200px) {
+      font-size: 60px !important;
+    }
+  }
+}
+
+img-comparison-slider {
+  --divider-width: 2 px;
+  --divider-color: #c0c0c0;
+  --default-handle-opacity: 0, 3;
+  outline: none;
+  max-width: 1400px;
+}
+.coloured-slider {
+  --divider-color: rgba(0, 0, 0, 0.5);
+  --default-handle-color: rgba(0, 0, 0, 0.5);
+}
+.slider-example-relative-size {
+  --default-handle-width: clamp(40px, 3vw, 200px);
+  @media (min-width: 600px) {
+    --default-handle-width: clamp(40px, 8vw, 200px);
+  }
+}

@@ -1,0 +1,245 @@
+.accordion {
+  display: flex;
+  align-items: center;
+
+  @include font(18px, normal, 1.22, normal);
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+.price {
+  @include font(14px, normal, 1.22, normal);
+  &__title {
+    @include font(30px, 300, 1.22, normal);
+    font-family: $font-Monts__Alt;
+    @media (min-width: 600px) {
+      @include font(40px, 300, 1.22, normal);
+    }
+    @media (min-width: 800px) {
+      @include font(50px, 300, 1.22, normal);
+    }
+    @media (min-width: 1000px) {
+      @include font(60px, 300, 1.22, normal);
+    }
+    @media (min-width: 1200px) {
+      @include font(80px, 300, 1.22, normal);
+    }
+  }
+  &__cover {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: 65px;
+    @media (min-width: 340px) {
+      height: 60px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 67px;
+
+    &--center {
+      justify-content: center;
+    }
+  }
+  &__wrapper ul {
+    width: 450px;
+    @include font(16px, normal, 1.6, normal);
+    @media (min-width: 1200px) {
+      @include font(18px, normal, 1.6, normal);
+    }
+  }
+  &__wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    & ul {
+      @include font(12px, normal, 1.6, normal);
+      margin-left: auto;
+      margin-right: auto;
+      width: 250px;
+      @media (min-width: 460px) {
+        width: 350px;
+      }
+      text-align: left;
+    }
+  }
+  &__wrapper-line {
+    position: relative;
+  }
+  &__line {
+    position: absolute;
+    border-right: 1px solid;
+    padding-top: 50px;
+    height: 228px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__list {
+    margin-top: 20px;
+    @media (min-width: 800px) {
+      margin-top: 50px;
+    }
+  }
+  &__item {
+    border-bottom: 1px solid;
+  }
+  &__item:first-child {
+    border-top: 1px solid;
+  }
+  &__number {
+    display: flex;
+    justify-content: left;
+    width: 50px;
+    margin-right: 10px;
+
+    font-family: $font-Monts__Alt;
+    font-size: 28px;
+    @media (min-width: 500px) {
+      font-size: 40px;
+      width: 100px;
+    }
+    @media (min-width: 600px) {
+      width: 150px;
+    }
+    @media (min-width: 800px) {
+      font-size: 50px;
+      margin-left: 24px;
+      width: 200px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 60px;
+    }
+    @media (min-width: 1200px) {
+      margin-left: 134px;
+    }
+  }
+  &__name {
+    display: flex;
+    margin-left: 0px;
+    margin-right: 20px;
+    font-size: 13px;
+    // ! ===================
+    width: 100%;
+    text-align: start;
+    @media (min-width: 400px) {
+      font-size: 14px;
+    }
+    @media (min-width: 600px) {
+      margin-left: 0px;
+    }
+    @media (min-width: 800px) {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 16px;
+      margin-left: 70px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 18px;
+      margin-left: 80px;
+    }
+    @media (min-width: 1400px) {
+      margin-left: 100px;
+    }
+  }
+
+  &__text {
+    @include font(12px, normal, 1.6, normal);
+    @media (min-width: 1000px) {
+      @include font(15px, normal, 1.6, normal);
+    }
+    @media (min-width: 1200px) {
+      @include font(18px, normal, 1.6, normal);
+    }
+  }
+  &--bold {
+    @include font(12px, 700, 1.6, normal);
+    @media (min-width: 1000px) {
+      @include font(15px, 700, 1.6, normal);
+    }
+    @media (min-width: 1200px) {
+      @include font(18px, 700, 1.6, normal);
+    }
+  }
+  &__description {
+    margin-top: 15px;
+    @include font(12px, normal, 1.6, normal);
+    @media (min-width: 1000px) {
+      @include font(15px, normal, 1.6, normal);
+    }
+    @media (min-width: 1200px) {
+      @include font(18px, normal, 1.6, normal);
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 220px;
+    font-size: 12px;
+    font-family: $font-Monts__Alt;
+
+    @media (min-width: 600px) {
+      margin-top: 35px;
+      width: 260px;
+      font-size: 15px;
+    }
+    @media (min-width: 1000px) {
+      margin-top: 42px;
+      width: 360px;
+      font-size: 18px;
+    }
+    @media (min-width: 1200px) {
+      transform: scale(1);
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .frame-button-left {
+    position: absolute;
+    left: 0;
+  }
+  .frame-button-right {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.marker {
+  position: relative;
+  &::before {
+    position: absolute;
+    left: -12px;
+    top: -13px;
+    content: '\2022';
+    font-size: 25px;
+    padding-right: 5px;
+    @media (min-width: 1000px) {
+      top: -10px;
+    }
+    @media (min-width: 1000px) {
+      top: -7px;
+    }
+  }
+}

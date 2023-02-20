@@ -1,0 +1,92 @@
+.privacy-policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  &__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 10px;
+
+    @media (min-width: 1200px) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      gap: 100px;
+      @include font(50px, 500, 1.22, normal);
+    }
+    &-title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  }
+  &__link-home-page {
+    color: #000;
+    margin-bottom: 50px;
+    @include font(25px, 500, 1.22, normal);
+    margin-top: 30px;
+  }
+  & h1 {
+    font-family: $font-Monts__Alt;
+    @include font(20px, 500, 1.22, normal);
+    @media (min-width: 800px) {
+      @include font(30px, 600, 1.22, normal);
+    }
+  }
+  & ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+    @media (min-width: 800px) {
+      gap: 20px;
+    }
+    & li {
+      @include font(23px, 400, 1.22, normal);
+      @media (min-width: 1200px) {
+        font-size: 30px;
+      }
+      & p {
+        margin-bottom: 15px;
+        @include font(20px, 400, 1.22, normal);
+        @media (min-width: 800px) {
+          margin-bottom: 30px;
+        }
+        @media (min-width: 1200px) {
+          font-size: 30px;
+        }
+      }
+      & article {
+        @include font(17px, 300, 1.22, normal);
+        @media (min-width: 800px) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

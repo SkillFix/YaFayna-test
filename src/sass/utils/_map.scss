@@ -1,0 +1,46 @@
+.map {
+  margin-bottom: 20px;
+  padding: 0;
+  filter: grayscale(100%);
+  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    filter: grayscale(0%);
+  }
+
+  height: 250px;
+  @media (min-width: 600px) {
+    height: 300px;
+  }
+  @media (min-width: 800px) {
+    height: 350px;
+  }
+  @media (min-width: 1000px) {
+    height: 450px;
+  }
+  @media (min-width: 1200px) {
+    height: 570px;
+  }
+  & .container {
+    max-width: 1920px;
+    padding: 0;
+    @media screen and (min-width: 600px) {
+      padding: 0 20px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 0 50px;
+    }
+  }
+}
+.map__desktop {
+  display: none;
+  @media (min-width: 800px) {
+    display: block;
+  }
+}
+.map__mobile {
+  display: block;
+  @media (min-width: 800px) {
+    display: none;
+  }
+}
