@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /js/
+Disallow: /phpmailer/
+Sitemap: https://yafayna.com/sitemap.xml

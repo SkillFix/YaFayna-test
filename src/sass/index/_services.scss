@@ -104,6 +104,8 @@
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 20px;
+    margin: auto;
+    max-width: 1200px;
     @media (min-width: 1000px) {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -179,7 +181,10 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    @include font(16px, 400, 1.22, normal);
+    @include font(12px, 400, 1.22, normal);
+    @media (min-width: 370px) {
+      font-size: 15px;
+      }
     @media (min-width: 420px) {
       @include font(18px, 400, 1.22, normal);
     }
@@ -189,14 +194,17 @@
   }
   &__number {
     font-family: $font-Monts__Alt;
-    @include font(30px, 300, 1.22, normal);
+    @include font(25px, 300, 1.22, normal);
     margin-right: 10px;
+    @media (min-width: 370px) {
+    font-size: 30px;
+    }
     @media (min-width: 700px) {
-      @include font(38px, 300, 1.22, normal);
+      font-size: 38px;
       margin-right: 20px;
     }
     @media (min-width: 1050px) {
-      @include font(40px, 300, 1.22, normal);
+      font-size: 40px;
       margin-right: 5px;
     }
     &--white {

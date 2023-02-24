@@ -44,7 +44,7 @@ $(document).ready(function () {
 
   function onAnchorScroll(event) {
     event.preventDefault();
-    let targetId = event.target.getAttribute('href').slice(1);
+    const targetId = event.target.getAttribute('href').slice(1);
     let target = document.getElementById(targetId);
     let targetPos;
     // console.log(targetId, target);
@@ -71,6 +71,6 @@ $(document).ready(function () {
     refs.servicesMobile.removeEventListener('click', onAnchorScroll);
     refs.priceMobile.removeEventListener('click', onAnchorScroll);
     refs.beforeAfterMobile.removeEventListener('click', onAnchorScroll);
-    refs.contactMobile.addEventListener('click', onAnchorScroll);
+    refs.contactMobile.removeEventListener('click', onAnchorScroll);
   }
 });

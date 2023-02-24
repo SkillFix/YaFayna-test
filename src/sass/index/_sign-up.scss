@@ -61,9 +61,6 @@
     @media (min-width: 380px) {
       @include font(22px, 300, 1.22, normal);
     }
-    @media (min-width: 410px) {
-      @include font(24px, 300, 1.22, normal);
-    }
     @media (min-width: 450px) {
       @include font(26px, 300, 1.22, normal);
       margin-bottom: 50px;

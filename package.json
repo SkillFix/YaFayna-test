@@ -5,7 +5,8 @@
   "homepage": "https://SkillFix.github.io/YaFayna-test",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /YaFayna-test/"
+    "build": "parcel build src/*.html --public-url /YaFayna-test/",
+    "sass": "sass src/sass/main.scss src/styles.min.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,8 @@
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "sass": "^1.58.3"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
