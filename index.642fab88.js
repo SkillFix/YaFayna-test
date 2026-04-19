@@ -1,0 +1,2 @@
+$(document).ready((function(){const t=document.querySelector(".price__button"),e=document.querySelector(".price__button-switcher");t.addEventListener("click",(function(){const t=document.querySelectorAll(".price__item--more");for(let e=0;e<t.length;e++)t[e].classList.toggle("hidden");t[7].classList.contains("hidden")?e.textContent="Посмотреть все Услуги":e.textContent="Свернуть услуги"}))}));
+//# sourceMappingURL=index.642fab88.js.map
